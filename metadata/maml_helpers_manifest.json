@@ -1,0 +1,25 @@
+{
+  "entries": [
+    {
+      "path": "VC_MAML/check_weighted_output.py",
+      "source_upload": "check_weighted_output.py",
+      "original_sha256": "ae1b5c84111b8829879dc003150709fd2ea5878ba05f7aa6aac8fbdfbd9e40e5",
+      "sha256": "c66c0451d486c9cc1263a07a4960e2e0f420d8e3bf4dde15db5eb7debe85e531",
+      "adaptation": "Main guard and safe input/output/CLI handling; numerical source modules are unchanged."
+    },
+    {
+      "path": "VC_MAML/plot_fig3.py",
+      "source_upload": "plot_fig3.py",
+      "original_sha256": "2e8afc8846f9d977e32c21f65d3e144379cbf6f1c72007c2fe67d2258f92eed6",
+      "sha256": "5aa4eeaea9f17a8815bbd3a01ce7e2696a266592203b4f13c7a532cf8bb5d75e",
+      "adaptation": "Main guard and safe input/output/CLI handling; numerical source modules are unchanged."
+    },
+    {
+      "path": "VC_MAML/run_fig3.py",
+      "source_upload": "run_fig3.py",
+      "original_sha256": "42fd7d07231ed596cc8fb643474bae9276881f9e1d174e935de2da64dd7f1b89",
+      "sha256": "ec498cdfb4a1bf115a3d930ed2ad1362fbe1458b8e9d1e8140e0348c213b611f",
+      "adaptation": "Main guard and safe input/output/CLI handling; numerical source modules are unchanged."
+    }
+  ]
+}

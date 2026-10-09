@@ -1,0 +1,92 @@
+[
+  {
+    "candidate_id": "gd_L_30",
+    "method": "gd",
+    "L": 30.0,
+    "M": null
+  },
+  {
+    "candidate_id": "gd_L_100",
+    "method": "gd",
+    "L": 100.0,
+    "M": null
+  },
+  {
+    "candidate_id": "gd_L_300",
+    "method": "gd",
+    "L": 300.0,
+    "M": null
+  },
+  {
+    "candidate_id": "nag_L_30",
+    "method": "nag",
+    "L": 30.0,
+    "M": null
+  },
+  {
+    "candidate_id": "nag_L_100",
+    "method": "nag",
+    "L": 100.0,
+    "M": null
+  },
+  {
+    "candidate_id": "nag_L_300",
+    "method": "nag",
+    "L": 300.0,
+    "M": null
+  },
+  {
+    "candidate_id": "vc_L_30_M_30",
+    "method": "vc",
+    "L": 30.0,
+    "M": 30.0
+  },
+  {
+    "candidate_id": "vc_L_30_M_100",
+    "method": "vc",
+    "L": 30.0,
+    "M": 100.0
+  },
+  {
+    "candidate_id": "vc_L_30_M_300",
+    "method": "vc",
+    "L": 30.0,
+    "M": 300.0
+  },
+  {
+    "candidate_id": "vc_L_100_M_30",
+    "method": "vc",
+    "L": 100.0,
+    "M": 30.0
+  },
+  {
+    "candidate_id": "vc_L_100_M_100",
+    "method": "vc",
+    "L": 100.0,
+    "M": 100.0
+  },
+  {
+    "candidate_id": "vc_L_100_M_300",
+    "method": "vc",
+    "L": 100.0,
+    "M": 300.0
+  },
+  {
+    "candidate_id": "vc_L_300_M_30",
+    "method": "vc",
+    "L": 300.0,
+    "M": 30.0
+  },
+  {
+    "candidate_id": "vc_L_300_M_100",
+    "method": "vc",
+    "L": 300.0,
+    "M": 100.0
+  },
+  {
+    "candidate_id": "vc_L_300_M_300",
+    "method": "vc",
+    "L": 300.0,
+    "M": 300.0
+  }
+]

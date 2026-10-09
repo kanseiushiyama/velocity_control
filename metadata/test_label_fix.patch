@@ -1,0 +1,13 @@
+--- original/vc_adaptive/tests/test_paper_mode.py
++++ updated/vc_adaptive/tests/test_paper_mode.py
+@@ -105,8 +105,8 @@
+                 np.testing.assert_array_equal(lines["VC"].get_ydata(), [8, 4])
+                 np.testing.assert_array_equal(lines["Predictive VC"].get_ydata(), [4, 2])
+             self.assertEqual(len(figures[3][1].lines), 9)
+-            self.assertEqual(figures[1][1].get_xlabel(), "Oracle calls")
+-            self.assertEqual(figures[3][1].get_xlabel(), "Oracle calls")
++            self.assertEqual(figures[1][1].get_xlabel(), "#oracle calls")
++            self.assertEqual(figures[3][1].get_xlabel(), "#oracle calls")
+             for line in figures[1][1].lines:
+                 np.testing.assert_array_equal(line.get_xdata(), [2, 4])
+             for line in figures[3][1].lines:

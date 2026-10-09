@@ -1,0 +1,77 @@
+{
+  "L": 10000,
+  "algorithms": [
+    "gd",
+    "hb",
+    "agd",
+    "nag",
+    "ours",
+    "ours_defer_cp"
+  ],
+  "checkpoint_threshold": 10,
+  "dim": null,
+  "experiment_version": "benchmark-v9-oracle-qing-compensated",
+  "hmax": 1.0,
+  "jobs": [
+    {
+      "R": null,
+      "algorithm": "gd",
+      "alpha": null,
+      "job_id": "gd",
+      "label": "GD"
+    },
+    {
+      "R": null,
+      "algorithm": "hb",
+      "alpha": null,
+      "job_id": "hb",
+      "label": "Restart HB"
+    },
+    {
+      "R": null,
+      "algorithm": "agd",
+      "alpha": null,
+      "job_id": "agd",
+      "label": "Restart AGD"
+    },
+    {
+      "R": null,
+      "algorithm": "nag",
+      "alpha": null,
+      "job_id": "nag",
+      "label": "NAG-SC"
+    },
+    {
+      "R": 0.5,
+      "algorithm": "ours",
+      "alpha": 0.1,
+      "checkpoint_threshold": null,
+      "job_id": "ours_R0p5_a0p1_parallel",
+      "label": "AdaVeloControl (R=0.5, alpha=0.1, parallel)",
+      "line_search_mode": "parallel"
+    },
+    {
+      "R": 0.5,
+      "algorithm": "ours_defer_cp",
+      "alpha": 0.1,
+      "checkpoint_threshold": 10,
+      "job_id": "ours_deferR_cp_T10_R0p5_a0p1_parallel",
+      "label": "AdaVeloControl-deferR-CP (T=10, R=0.5, alpha=0.1, parallel)",
+      "line_search_mode": "parallel"
+    }
+  ],
+  "line_search_mode": [
+    "parallel"
+  ],
+  "n_iter": 17500,
+  "paper": true,
+  "paper_compare": true,
+  "paper_sweep": false,
+  "problem": "quad_arith",
+  "repeats": 5,
+  "seed": 0,
+  "seed_stride": 0,
+  "sigma_x0": 1.0,
+  "stop_mode": "time",
+  "time_limit": 50.0
+}

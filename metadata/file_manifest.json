@@ -1,0 +1,1731 @@
+{
+  "source_archive": "VC_paper(1).zip",
+  "source_archive_sha256": "72894a76480ce313a5fc5126185f2fdef9af46569d166991abde407cce91d232",
+  "files": [
+    {
+      "path": "VC_MAML/figures/fig3_maml.png",
+      "sha256": "703cadb97e608c8f06944c3c46536f14d12cdd4bcbe5ede3b5d23656273bf466",
+      "size": 532295,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "703cadb97e608c8f06944c3c46536f14d12cdd4bcbe5ede3b5d23656273bf466",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/figures/maml.pdf",
+      "sha256": "012df25fcfb4fb5bd83f463a78b99e4c0129fd1e22443f939e4387fbfaaf878c",
+      "size": 67711,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "012df25fcfb4fb5bd83f463a78b99e4c0129fd1e22443f939e4387fbfaaf878c",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/maml_code/README.txt",
+      "sha256": "5bdae20516a17ff98905d04addfb9aea99c91fe7c4206bc659fb4056067f01d6",
+      "size": 3628,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "8bc55369578a6bf886011610dc1b653eb0c9eed6ee5f9938e57f6c806b4fefc7",
+      "repository_content_changed": true
+    },
+    {
+      "path": "VC_MAML/maml_code/benchmark_maml.py",
+      "sha256": "184923d12683c4e524f579a9e7df49851744f96ae5aaa3a8d21ff7db4510a807",
+      "size": 20648,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "184923d12683c4e524f579a9e7df49851744f96ae5aaa3a8d21ff7db4510a807",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/maml_code/maml_benchmark_core.py",
+      "sha256": "3c52d0686599e20b9fcd0fbe2c7c0f6ca52e3426ec7f5d1ad26999931fd1cfb2",
+      "size": 13752,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "3c52d0686599e20b9fcd0fbe2c7c0f6ca52e3426ec7f5d1ad26999931fd1cfb2",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/maml_code/requirements.txt",
+      "sha256": "2bc947535530aa4a9fbe346740a8240da1548cb432326e2a1a4d2ba964261d28",
+      "size": 59,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "2bc947535530aa4a9fbe346740a8240da1548cb432326e2a1a4d2ba964261d28",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/maml_code/run_maml_trial.py",
+      "sha256": "6b55d2d0af088f26d4423943f793d3e8eaea20665e5e0d1da817bb824bf41a50",
+      "size": 3224,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "6b55d2d0af088f26d4423943f793d3e8eaea20665e5e0d1da817bb824bf41a50",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_20/all_trial_summaries.csv",
+      "sha256": "b30eb5aa84cd92e95b28d07ee7d03ece3fdc0f67da29655ca37b357faf63cd73",
+      "size": 25454,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "b30eb5aa84cd92e95b28d07ee7d03ece3fdc0f67da29655ca37b357faf63cd73",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_20/base_config.json",
+      "sha256": "77730f61bf9531dda63ed9e1e87e6aed8c9e38ce8b57e867cff66ef1a9cc88c7",
+      "size": 590,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "77730f61bf9531dda63ed9e1e87e6aed8c9e38ce8b57e867cff66ef1a9cc88c7",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_20/best_hyperparameters.json",
+      "sha256": "146a2fcf807428da9be91e86712d700458cf1f3c37afce121b41aa6b6ceb3bc3",
+      "size": 1092,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "146a2fcf807428da9be91e86712d700458cf1f3c37afce121b41aa6b6ceb3bc3",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_20/candidate_grid.json",
+      "sha256": "747549126a2fa6d748962a1ecd24016c1bf525ec86f0ba99bd7e730b4289a422",
+      "size": 1420,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "747549126a2fa6d748962a1ecd24016c1bf525ec86f0ba99bd7e730b4289a422",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_20/fig3_curves.npz",
+      "sha256": "170951c41a10d3030942e360bec7e62ad8e5e8aa8c140911648bd5823f654f82",
+      "size": 199678,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "170951c41a10d3030942e360bec7e62ad8e5e8aa8c140911648bd5823f654f82",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_20/hyperparameter_grid_results.csv",
+      "sha256": "2c44c2575e35a677c9625b15675679903a0e922fe7289723bfdd3fbfc90b31ba",
+      "size": 2001,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "2c44c2575e35a677c9625b15675679903a0e922fe7289723bfdd3fbfc90b31ba",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_20/maml_final_loss_boxplot.pdf",
+      "sha256": "24814a918d49342ec33b5fcc3a71903ac1cb0b3b79e43168e93a8b9d6e1cf597",
+      "size": 13302,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_20/maml_iter_all_candidates.pdf",
+      "sha256": "d477aba8225ce4980b9837ebf1cf656e7eb6993bbb2d8dabf6f99a89b5a0edb8",
+      "size": 432176,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_20/maml_iter_median.pdf",
+      "sha256": "ad5a4dd78e80dd07ab4e10bc81d3550886e07bc51e230c79bb9ef66fd78d9fcc",
+      "size": 3647493,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_20/maml_oracle_all_candidates.pdf",
+      "sha256": "a893f26996c81bcf17d76938ddbf18744a5be858227eb8e7f36cb74beea5d5b4",
+      "size": 35175,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_20/maml_oracle_median.pdf",
+      "sha256": "0ae6616ce3447889011c8c29489fbe45a2eac8bc310f41961bc7957ac2eb9e81",
+      "size": 25210,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_20/maml_time_all_candidates.pdf",
+      "sha256": "373607c845c768861ef3475933a7f4544addc3286a25819fea09301b604b99ff",
+      "size": 31352,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_20/maml_time_median.pdf",
+      "sha256": "7df28c9de033924a5e0efcf730e0290cf3fa205241b6aaa916e18e48f06f6642",
+      "size": 25914,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_5/all_trial_summaries.csv",
+      "sha256": "80c263d202a7b76fcb7d6c9bd05a1d9eb88c89231a761b9bdc84a52fe08b6d41",
+      "size": 25200,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "80c263d202a7b76fcb7d6c9bd05a1d9eb88c89231a761b9bdc84a52fe08b6d41",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_5/base_config.json",
+      "sha256": "2e7763cc55e6690c4b7f861d49f51f31f52aacefcff37da1274f7a2587906af1",
+      "size": 589,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "2e7763cc55e6690c4b7f861d49f51f31f52aacefcff37da1274f7a2587906af1",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_5/best_hyperparameters.json",
+      "sha256": "a43d59715eeb045dab163429a51ae611a20167eb129784d6e9c5301e3d5e6e11",
+      "size": 1086,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "a43d59715eeb045dab163429a51ae611a20167eb129784d6e9c5301e3d5e6e11",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_5/candidate_grid.json",
+      "sha256": "747549126a2fa6d748962a1ecd24016c1bf525ec86f0ba99bd7e730b4289a422",
+      "size": 1420,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "747549126a2fa6d748962a1ecd24016c1bf525ec86f0ba99bd7e730b4289a422",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_5/fig3_curves.npz",
+      "sha256": "5875fd1c22c72de69972c9bb5ca8448404599b146d127de6b16704acc97f8e10",
+      "size": 199282,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "5875fd1c22c72de69972c9bb5ca8448404599b146d127de6b16704acc97f8e10",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_5/hyperparameter_grid_results.csv",
+      "sha256": "8723e5eaacc733fae45bb165434802a127e086530d1bfb065a536bd407838174",
+      "size": 1970,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "8723e5eaacc733fae45bb165434802a127e086530d1bfb065a536bd407838174",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_5/maml_final_loss_boxplot.pdf",
+      "sha256": "680711d7394e402238396707729e4416fd9dde8b48a930cdf195b0a2fa93f523",
+      "size": 14605,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_5/maml_iter_all_candidates.pdf",
+      "sha256": "52923d52ff2f4862d83bc3b82373d3ba041fc713f194bdbf657b859c411bcfc1",
+      "size": 417917,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_5/maml_iter_median.pdf",
+      "sha256": "0ffc58934202d11eef9bfe4a2b5763c2d6a31520e2b637ac3cc83f296b683887",
+      "size": 2586834,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_5/maml_oracle_all_candidates.pdf",
+      "sha256": "8af71e7bfbee2b4148da767027c7d2962250e05d558631e6cfe65b77b581810d",
+      "size": 35629,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_5/maml_oracle_median.pdf",
+      "sha256": "0dc95738715a19435142e1f2734e7fbb65a44b7d1699922a581d0e209b316dcc",
+      "size": 25393,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_5/maml_time_all_candidates.pdf",
+      "sha256": "679b628ea673814e0e0f6710b0cab582468afa7677178b6f791a6c13bc932b24",
+      "size": 30541,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_MAML/result/inner_5/maml_time_median.pdf",
+      "sha256": "522aced450ece5468ab333e93ba69ea3435afb99eb955b25899a13dbc15e6b34",
+      "size": 25089,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_differentiable/diffable.py",
+      "sha256": "a647f3ecc14f32c7e7bdafb7aa55d9fed2f956d0743534cf04af52e64bb7c3a2",
+      "size": 24783,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "a647f3ecc14f32c7e7bdafb7aa55d9fed2f956d0743534cf04af52e64bb7c3a2",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_differentiable/results/diff_dist.pdf",
+      "sha256": "f9bd52f1323bef9a7f06b4b38c99e214f17814bce67a7cbe4286d705c2a176c7",
+      "size": 16534,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "f9bd52f1323bef9a7f06b4b38c99e214f17814bce67a7cbe4286d705c2a176c7",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_differentiable/results/diff_grad.pdf",
+      "sha256": "ab3f78bd6d8293f6e34dd8cb13f569c025c633801a2a4259291293c2c18913ca",
+      "size": 17457,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "ab3f78bd6d8293f6e34dd8cb13f569c025c633801a2a4259291293c2c18913ca",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_differentiable/results/diff_jacobian.pdf",
+      "sha256": "c6affb48d1169289b2d919bbb94030ea2ffcfe6355215aea5d2910ff34b1a977",
+      "size": 17595,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "c6affb48d1169289b2d919bbb94030ea2ffcfe6355215aea5d2910ff34b1a977",
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_differentiable/results/metrics.csv",
+      "sha256": "90c311e5ae54f05196a782db84a0190181b991a0e6c6665bdd617e9a006ace71",
+      "size": 1998965,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "VC_differentiable/results/velocity_control_rhat.pdf",
+      "sha256": "152497027a157a1e78e1fe0d101d6c61b286b650d0c5b4275fa2c55c5e1ece87",
+      "size": 12269,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "152497027a157a1e78e1fe0d101d6c61b286b650d0c5b4275fa2c55c5e1ece87",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/README.md",
+      "sha256": "514a0a063d2108d7e8f944efb653401ff10a872b8694561c7a8ffbb1f06d2310",
+      "size": 29329,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "5bef04e5a26c7c01e534bd460d38b276ef08240ad52d9c640c3b35db02ad0427",
+      "repository_content_changed": true
+    },
+    {
+      "path": "vc_adaptive/experiment_config.py",
+      "sha256": "75450f7a8135485db7a12034c1cd3e9a43add3814703f167f872543d271ef113",
+      "size": 3994,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "75450f7a8135485db7a12034c1cd3e9a43add3814703f167f872543d271ef113",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/dixon_price/dixon_price_vc_compare_val_grad_call.pdf",
+      "sha256": "4808c396dbb6cbe265a0496d793ec5349d62e69583b2880dd29cf608ca174654",
+      "size": 34882,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "4808c396dbb6cbe265a0496d793ec5349d62e69583b2880dd29cf608ca174654",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/dixon_price/dixon_price_vc_compare_val_oracle_call.pdf",
+      "sha256": "53f65272bdd4b54685e0e2bc84465eae197216abbe13e67b0eb69eb1cc10a1e0",
+      "size": 35807,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "53f65272bdd4b54685e0e2bc84465eae197216abbe13e67b0eb69eb1cc10a1e0",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/dixon_price/dixon_price_vc_compare_val_time.pdf",
+      "sha256": "0df981e4236894fc9c228fba6ac705ae7835ebea0bc8e3e0a0c1a4f7fce743c0",
+      "size": 43800,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "0df981e4236894fc9c228fba6ac705ae7835ebea0bc8e3e0a0c1a4f7fce743c0",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/dixon_price/dixon_price_vc_sweep_val_oracle_call.pdf",
+      "sha256": "b0ca0d8b1575e0fa2bd36b6c92dcb2dbf6da2d58862a4fb2d67cea3c6b48acde",
+      "size": 22855,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "b0ca0d8b1575e0fa2bd36b6c92dcb2dbf6da2d58862a4fb2d67cea3c6b48acde",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/powell/powell_vc_compare_val_grad_call.pdf",
+      "sha256": "77216ebaff73232c31f3f4bc309efeec213cc37fd35d414c4d5c354042329619",
+      "size": 25053,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "77216ebaff73232c31f3f4bc309efeec213cc37fd35d414c4d5c354042329619",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/powell/powell_vc_compare_val_oracle_call.pdf",
+      "sha256": "dd468878122faee7807cfc174b487ea2917de795dacfc23bb90d85ce28d0be65",
+      "size": 25893,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "dd468878122faee7807cfc174b487ea2917de795dacfc23bb90d85ce28d0be65",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/powell/powell_vc_compare_val_time.pdf",
+      "sha256": "d84bc91ce7f3d52d5280ec8189e91d8fefcddfed48632da21ec337b68e7b1710",
+      "size": 26826,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "d84bc91ce7f3d52d5280ec8189e91d8fefcddfed48632da21ec337b68e7b1710",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/powell/powell_vc_sweep_val_oracle_call.pdf",
+      "sha256": "b76ad0bb92556524442f0b6bebc92b6f9b39da3ca19cfccfd3c5c9b198788734",
+      "size": 24028,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "b76ad0bb92556524442f0b6bebc92b6f9b39da3ca19cfccfd3c5c9b198788734",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/qing/qing_vc_compare_val_grad_call.pdf",
+      "sha256": "23b14f7e984e2a658863e108f25ac679649465e409e97c8f53cfa140709fc9a4",
+      "size": 25054,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "23b14f7e984e2a658863e108f25ac679649465e409e97c8f53cfa140709fc9a4",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/qing/qing_vc_compare_val_oracle_call.pdf",
+      "sha256": "402526ecbd3298b998c4ee63872bb201345351c8e1c2d2b49e6d055ef66b7163",
+      "size": 25852,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "402526ecbd3298b998c4ee63872bb201345351c8e1c2d2b49e6d055ef66b7163",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/qing/qing_vc_compare_val_time.pdf",
+      "sha256": "f8f1c3a1f34ee68c0d1d327e394f6fe3e616fc6525eaef01952d9e4de3fb7c05",
+      "size": 26704,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "f8f1c3a1f34ee68c0d1d327e394f6fe3e616fc6525eaef01952d9e4de3fb7c05",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/qing/qing_vc_sweep_val_oracle_call.pdf",
+      "sha256": "19561d74bab9d035e4492953b03ed3e349699772a578a7f835f6c4fe659d2f18",
+      "size": 34391,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "19561d74bab9d035e4492953b03ed3e349699772a578a7f835f6c4fe659d2f18",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/quad_arith/quad_arith_vc_compare_val_grad_call.pdf",
+      "sha256": "ceed2e46f97a0551ed844443d4e387491519adea9d410fdb5e5a1d0fafc54f99",
+      "size": 61905,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "ceed2e46f97a0551ed844443d4e387491519adea9d410fdb5e5a1d0fafc54f99",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/quad_arith/quad_arith_vc_compare_val_oracle_call.pdf",
+      "sha256": "8fb02976b1099ffa4bdbdd8779dc14d33b8e47877cd18469efb9c71ac44343f3",
+      "size": 72359,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "8fb02976b1099ffa4bdbdd8779dc14d33b8e47877cd18469efb9c71ac44343f3",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/quad_arith/quad_arith_vc_compare_val_time.pdf",
+      "sha256": "10149a440a5d9f85cf04f602456816b8a25085fc15339f9ba7ae34337bb3126e",
+      "size": 77299,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "10149a440a5d9f85cf04f602456816b8a25085fc15339f9ba7ae34337bb3126e",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/quad_arith/quad_arith_vc_sweep_val_oracle_call.pdf",
+      "sha256": "83f755fa47ebf44c3e76590f4d650859a93cccfb8c19863921977edbe00355a8",
+      "size": 99704,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "83f755fa47ebf44c3e76590f4d650859a93cccfb8c19863921977edbe00355a8",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/rosenbrock/rosenbrock_vc_compare_val_grad_call.pdf",
+      "sha256": "ebcc5019012c87209c9c8b4e8d96b85c71e08123d2d3f70fd2a5da6e44992cd3",
+      "size": 33433,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "ebcc5019012c87209c9c8b4e8d96b85c71e08123d2d3f70fd2a5da6e44992cd3",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/rosenbrock/rosenbrock_vc_compare_val_oracle_call.pdf",
+      "sha256": "9f8fb011d9e1e52683e3bb0469008d4a09edee057a0ba3038484bdc29eb80646",
+      "size": 36273,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "9f8fb011d9e1e52683e3bb0469008d4a09edee057a0ba3038484bdc29eb80646",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/rosenbrock/rosenbrock_vc_compare_val_time.pdf",
+      "sha256": "fe3d4254212619e905c8e1536d1e341f4f6916110c22167d9fcea3620ff37411",
+      "size": 43610,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "fe3d4254212619e905c8e1536d1e341f4f6916110c22167d9fcea3620ff37411",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/figures/rosenbrock/rosenbrock_vc_sweep_val_oracle_call.pdf",
+      "sha256": "f06f9144222ca283125f25c97021103ba313918261f58988d1b5add8e2d1ca93",
+      "size": 71155,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "f06f9144222ca283125f25c97021103ba313918261f58988d1b5add8e2d1ca93",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/main.py",
+      "sha256": "a86fc5270d6830a475ea022e10331e27d932a59d61759810c8a3ec67b0f4dc2e",
+      "size": 24020,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "a86fc5270d6830a475ea022e10331e27d932a59d61759810c8a3ec67b0f4dc2e",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/obj_func.py",
+      "sha256": "06f7eb7e36f75d3c2e38e2537546db65d4ff1d55dfdbff3805d90c932ef7fbb0",
+      "size": 12036,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "06f7eb7e36f75d3c2e38e2537546db65d4ff1d55dfdbff3805d90c932ef7fbb0",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/optimizer.py",
+      "sha256": "81f3e4ba1998137ff8f00f21d642ef7d717c7c8cd55d4d52ba4a151e8ba96e8d",
+      "size": 101061,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "81f3e4ba1998137ff8f00f21d642ef7d717c7c8cd55d4d52ba4a151e8ba96e8d",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/plot.py",
+      "sha256": "626311d0598050df0da1e982d709eb6868f22ec2e630531c504401c70a601bc0",
+      "size": 19017,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "626311d0598050df0da1e982d709eb6868f22ec2e630531c504401c70a601bc0",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/compare/Dixon_priceR0.5a0.1_adavelocontrol.npz",
+      "sha256": "d291c81a354f5514a172c31813069dbad5fffb8e9d6539be090e74a9ca8af803",
+      "size": 1285220,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/compare/Dixon_priceR0.5a0.1_adavelocontrol_deferR_cpT10.npz",
+      "sha256": "d69fded4648cdf393975870c2e43a3bbc3c72422188712169b42d54af800035c",
+      "size": 1199940,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/compare/Dixon_price_gd.npz",
+      "sha256": "fc0b8880314e44459435e0d9098f74d48595b696a0dd7144ec7f46ce14eb3c12",
+      "size": 2584304,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/compare/Dixon_price_restartAGD.npz",
+      "sha256": "8838c9cebe44c90f93d05956d7ca737f9c9eea5620ce65a9b267a37ca5e034ac",
+      "size": 2553776,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/compare/Dixon_price_restartHB.npz",
+      "sha256": "ca35248e44d4d95c0d3509a4a59af49a69dbd8132cf25e253c2151ce2193a8b1",
+      "size": 2162416,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/compare/base_config.json",
+      "sha256": "44c76c198bfef6fb830551457f3b8878a53063dd8280c84593bbdf9f894934b4",
+      "size": 1430,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "44c76c198bfef6fb830551457f3b8878a53063dd8280c84593bbdf9f894934b4",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/compare/benchmark_stats.csv",
+      "sha256": "a9739c3598913141ec2f443601baaaa1e97e3ccc48ceecd0492d9233ce925404",
+      "size": 1148,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/compare/benchmark_summary.csv",
+      "sha256": "13345f854faac0dc136226a05caefb1c452e41f580fe82df0ce323c471781ffa",
+      "size": 10300,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/compare/fig/dixon_price_vc_compare_val_grad_call.pdf",
+      "sha256": "949f882f82ac554f3acfe77a6abaf5ff71cf95aaef529e816fc8a4a91a7ecda8",
+      "size": 34860,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/compare/fig/dixon_price_vc_compare_val_oracle_call.pdf",
+      "sha256": "05590e36305bba6d5e38575ea66fbebb639f18b50c247af6d22118e040389419",
+      "size": 35628,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/compare/fig/dixon_price_vc_compare_val_time.pdf",
+      "sha256": "c01b9ec835be4a7997b5634ec4c4acb4c460ce8355d20e5a41447a0f59d4c549",
+      "size": 43775,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/sweep/Dixon_priceR0.25a0.05_adavelocontrol.npz",
+      "sha256": "b758cc27a863a42421cdf0dda0a5baa58a1346e9a0187f9338deebe1541ac4b3",
+      "size": 468932,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/sweep/Dixon_priceR0.25a0.1_adavelocontrol.npz",
+      "sha256": "539eba2ef9adba6790f3ebda46c2f1111d6817b9c38fe291bc23cde8860f3bc6",
+      "size": 449348,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/sweep/Dixon_priceR0.25a0.5_adavelocontrol.npz",
+      "sha256": "be564cc1300ea78c4019fcd36722393ff43ae1bbac66250e8b05f2e14e75733e",
+      "size": 490244,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/sweep/Dixon_priceR0.5a0.05_adavelocontrol.npz",
+      "sha256": "c9aa12192774503f65a8fb638707c883510a54af085a014b8ba4009109c657ff",
+      "size": 486356,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/sweep/Dixon_priceR0.5a0.1_adavelocontrol.npz",
+      "sha256": "27ac54f32d5536b133bc905021ee75181a1684363d2c6a4bd3a7ffde55627111",
+      "size": 480452,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/sweep/Dixon_priceR0.5a0.5_adavelocontrol.npz",
+      "sha256": "612a1752d327ceaffa9b0dcb3f14709726bd7ce6933db29720de4e81ace18ee9",
+      "size": 507236,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/sweep/Dixon_priceR0.75a0.05_adavelocontrol.npz",
+      "sha256": "71ffa2e67ceb12e3251644bc83c2650448eb0961132e5d62309f3696be52ed9a",
+      "size": 489524,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/sweep/Dixon_priceR0.75a0.1_adavelocontrol.npz",
+      "sha256": "632f120e27df49bf11da555cdbacad0466484847491140df18b2fc81c4343ddc",
+      "size": 472532,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/sweep/Dixon_priceR0.75a0.5_adavelocontrol.npz",
+      "sha256": "7b7b3642b3c555940ba88a2b2ccb8ff96bd8a0860ebeed8ace394bc82f30cdc8",
+      "size": 532004,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/sweep/base_config.json",
+      "sha256": "6d8ddfd8b7dcd1ebcb21169064f2a2f5b24e4212efe4757fea3dd32cdedf44af",
+      "size": 2773,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "6d8ddfd8b7dcd1ebcb21169064f2a2f5b24e4212efe4757fea3dd32cdedf44af",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/sweep/benchmark_stats.csv",
+      "sha256": "10a54c2f254093890007fa9a2dbeca8a453e2b4f0f5cb207d08c0f770fd172f8",
+      "size": 2012,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/sweep/benchmark_summary.csv",
+      "sha256": "ee4bc6d72e4de97cd945cda5b70a22a03aa1b473d522b875a50622237949fcb6",
+      "size": 4067,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/dixon_price/sweep/fig/dixon_price_vc_sweep_val_oracle_call.pdf",
+      "sha256": "899e611769052748c092b59861abcd0dcb89e487e6ce02a9dbd87cb8ec9bcaa5",
+      "size": 22850,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/compare/PowellR0.5a0.1_adavelocontrol.npz",
+      "sha256": "89f94c4a9db96b42e25cdde67cb45c609453c19183d8ad71756974e18bee2a73",
+      "size": 1655300,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/compare/PowellR0.5a0.1_adavelocontrol_deferR_cpT10.npz",
+      "sha256": "9ffbe948d0f407c26e8e41edd45d757b89375431e1f7180aeabd93ffaf0e4a43",
+      "size": 156580,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/compare/Powell_gd.npz",
+      "sha256": "5d2e805e8950efdf700d70868397f9f6a08d08296572d93131d03bfd708748fb",
+      "size": 4550256,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/compare/Powell_nagc.npz",
+      "sha256": "a62738386a0fb3c18f1bad6852d9f40d0beee3deab138ba93bf5ecb77f6f4de4",
+      "size": 4064496,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/compare/Powell_restartAGD.npz",
+      "sha256": "57b053250e51f4b588be2df15b2abb7c92fa2abac245003968ec43b2d42ee1c3",
+      "size": 2935024,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/compare/Powell_restartHB.npz",
+      "sha256": "33e740494e8030fb7fac3f6e768ceeed85b91f1991c2c2ed3fecfa0c4a737d9d",
+      "size": 2574448,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/compare/base_config.json",
+      "sha256": "d63810f83e61624b40644dda039d7f2955478bdd80d2cccc6b67f43b2b2ea990",
+      "size": 1562,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "d63810f83e61624b40644dda039d7f2955478bdd80d2cccc6b67f43b2b2ea990",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/compare/benchmark_stats.csv",
+      "sha256": "4f459a4091f4b345b12694e3c1807ad6f49dd0c73312bc355765c342d35c7e27",
+      "size": 1309,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/compare/benchmark_summary.csv",
+      "sha256": "48532452913f9486f1ea334f0c52b92985b5cea186c7f52ad56c3245881e8de8",
+      "size": 12292,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/compare/fig/powell_vc_compare_val_grad_call.pdf",
+      "sha256": "8b2399741ebdfae5a827b322d511f17f47b63130376ec54075c87dfad67fe856",
+      "size": 25135,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/compare/fig/powell_vc_compare_val_oracle_call.pdf",
+      "sha256": "8aba57a6b3a96b86f3b394f722e5761bd6e3ba034de4072e983fb0d920cc9570",
+      "size": 25789,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/compare/fig/powell_vc_compare_val_time.pdf",
+      "sha256": "eb13b2d77da909566bb056ffd3c23b632ea8da933f30275306ff7f64f1fb064a",
+      "size": 26788,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/sweep/PowellR0.25a0.05_adavelocontrol.npz",
+      "sha256": "93e38522a0ceb7861769e811365bc038e52f06b20ff0f4e1a7bac3503108526b",
+      "size": 411044,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/sweep/PowellR0.25a0.1_adavelocontrol.npz",
+      "sha256": "e88937e972bd00e32a85ff6daf5e17e18845f3ea7b689d19cf50f0f918264c06",
+      "size": 416372,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/sweep/PowellR0.25a0.5_adavelocontrol.npz",
+      "sha256": "c9c6458ba2de9c57ea351d662de7657cd66171b14f22eb9d548f0d12d3052918",
+      "size": 420692,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/sweep/PowellR0.5a0.05_adavelocontrol.npz",
+      "sha256": "36e4639f5e9ed53a3a006cc193309077c3a61b2c7c175e721f3d2c4f85d62d55",
+      "size": 409028,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/sweep/PowellR0.5a0.1_adavelocontrol.npz",
+      "sha256": "bd11581b9a6e72d73801d4d9ad60648932921a1101c69c5b070b856c467d15d1",
+      "size": 414932,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/sweep/PowellR0.5a0.5_adavelocontrol.npz",
+      "sha256": "19767236a399199bc18512d7c37b86fbd6ca047ba760f35d7f327a66403aedc0",
+      "size": 417812,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/sweep/PowellR0.75a0.05_adavelocontrol.npz",
+      "sha256": "0bec312e340bb7ccb778989c8ce59ad542cf7919a77f442ac5da8b6cdd5963c7",
+      "size": 415940,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/sweep/PowellR0.75a0.1_adavelocontrol.npz",
+      "sha256": "d3780c227dfaa55cac4d5c1a2023c7b73bd99539e8df9a652de6e348fccb38c4",
+      "size": 420116,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/sweep/PowellR0.75a0.5_adavelocontrol.npz",
+      "sha256": "b7589468cd84256741fa21efc49abba18bf653ceb76446d3ea57a71a4c4cf3c4",
+      "size": 417092,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/sweep/base_config.json",
+      "sha256": "a669417e0f8760c7d14539649c3b52b54ac28ae5805d96bb45b62285e3d0c329",
+      "size": 2768,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "a669417e0f8760c7d14539649c3b52b54ac28ae5805d96bb45b62285e3d0c329",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/sweep/benchmark_stats.csv",
+      "sha256": "672649f77085c5ff36cbba560005abcfdcb3550b8d330adf58d43fe8d864bb59",
+      "size": 2004,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/sweep/benchmark_summary.csv",
+      "sha256": "77393353d6192ea39233213d52fa591da54856b2411171ad890055d43d431c49",
+      "size": 4118,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/powell/sweep/fig/powell_vc_sweep_val_oracle_call.pdf",
+      "sha256": "53574a0fe174784cbb3cb590f206ed7238ee696483c97c0618089da3c2368558",
+      "size": 24082,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/compare/QingR0.5a0.1_adavelocontrol.npz",
+      "sha256": "d370c8f7c744a4afd5db88df80d0ead5efd1403467963274885f2265044d0bbd",
+      "size": 3562420,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/compare/QingR0.5a0.1_adavelocontrol_deferR_cpT10.npz",
+      "sha256": "dc87fbecb2bc9abf1e4adea678c6c97546df4ae671bf0bbf2bf5271c4aa2a845",
+      "size": 369140,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/compare/Qing_gd.npz",
+      "sha256": "14bdcf79c6eb643dd52560f3f0c406df50db3d156b80ac4f2d66d03efdf179aa",
+      "size": 6611376,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/compare/Qing_restartAGD.npz",
+      "sha256": "aa6aa2eace4e8ce99b40d34584332e578019edb5be4168641a591dbce3b4fbe8",
+      "size": 7487600,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/compare/Qing_restartHB.npz",
+      "sha256": "b5dfe4d2910adc4db6c430012b80cd150ef3176a7167a3f5f7242c5051e91b3d",
+      "size": 8035760,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/compare/base_config.json",
+      "sha256": "bbcdbc6dbce1e76dfe780b8919940ae480ea29ce1169aac4aa36a194bc668c96",
+      "size": 1423,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "bbcdbc6dbce1e76dfe780b8919940ae480ea29ce1169aac4aa36a194bc668c96",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/compare/benchmark_stats.csv",
+      "sha256": "97dcaf23505f68c077383909904b9812984870a393bfa1e98084f70d9bc269bd",
+      "size": 1172,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/compare/benchmark_summary.csv",
+      "sha256": "91e2af5ce988c8be050fb416b85e6196bdc3e4831ef61756cb7eb31b9769cd0d",
+      "size": 10527,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/compare/fig/qing_vc_compare_val_grad_call.pdf",
+      "sha256": "1caef92a22cf003c084a630d5b6261cd65e8a86c76953311a7a993f0a2b65332",
+      "size": 25158,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/compare/fig/qing_vc_compare_val_oracle_call.pdf",
+      "sha256": "2196b15b5b5aab9b12cff53da597a3a8098ac0b785b8a928291b0bce6867bfba",
+      "size": 25986,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/compare/fig/qing_vc_compare_val_time.pdf",
+      "sha256": "7c9f173d12aefb0e0192539fec9f37bd2b6d769a48dd6fe3bc599bcf9cf8bd2d",
+      "size": 26859,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/sweep/QingR0.25a0.05_adavelocontrol.npz",
+      "sha256": "71cc6b2c563128457543143024357ea6029fbbf2933a8a7ae71b73b571a7cac2",
+      "size": 1196276,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/sweep/QingR0.25a0.1_adavelocontrol.npz",
+      "sha256": "d930eba24202f9e7ca6c042070ba8e38739eb306de5b35c47865b3f6b2b3c197",
+      "size": 1295204,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/sweep/QingR0.25a0.5_adavelocontrol.npz",
+      "sha256": "d2bcb6f4da326712cf2086131daa11882bd0869ab800116aa72b5feb7b9c0fa9",
+      "size": 1324724,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/sweep/QingR0.5a0.05_adavelocontrol.npz",
+      "sha256": "1e586428e814ce488c6bc72e744af1812a26cc5da4c3b16dc78b2ed39919da68",
+      "size": 1152356,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/sweep/QingR0.5a0.1_adavelocontrol.npz",
+      "sha256": "11b2c5986054e9adba6172c3289600303290a950befd0c808ae4cdc2d1abac71",
+      "size": 1321700,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/sweep/QingR0.5a0.5_adavelocontrol.npz",
+      "sha256": "b39972fa5f8f759480b2b370f9203f7026cbefce332ccd9631193156754022eb",
+      "size": 1294772,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/sweep/QingR0.75a0.05_adavelocontrol.npz",
+      "sha256": "725374161f54f3f5ba4ef3c86d254fcfe061602133f353be67316e38580661e5",
+      "size": 1181012,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/sweep/QingR0.75a0.1_adavelocontrol.npz",
+      "sha256": "93457f4f6011563e7fb391b53d27d75e7e6b79800b0a5ab134eca236021b760d",
+      "size": 1229972,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/sweep/QingR0.75a0.5_adavelocontrol.npz",
+      "sha256": "beec6bab784d317cd120865617d4d1ef056331d3a815ef9515e7f5bb90f59fbc",
+      "size": 1301828,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/sweep/base_config.json",
+      "sha256": "716989c7b136091fb77561c0f7fee0761fee2f01caa4236fcc23707c97ed23d5",
+      "size": 2766,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "716989c7b136091fb77561c0f7fee0761fee2f01caa4236fcc23707c97ed23d5",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/sweep/benchmark_stats.csv",
+      "sha256": "57ab56c1050a5c458ad2ff5511ae379ff09ce1f9c29bc6b29f890d3d8bc9ead2",
+      "size": 2028,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/sweep/benchmark_summary.csv",
+      "sha256": "342d337a930ae8259376a9a02044bc8d965725cbdc0b0f6e34324658eb030f12",
+      "size": 4121,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/qing/sweep/fig/qing_vc_sweep_val_oracle_call.pdf",
+      "sha256": "cfed725467170ac831e6d0754f27275f34ca578358df1fb4c5dfb03005ad3e9e",
+      "size": 34462,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/compare/Quad_arithR0.5a0.1_adavelocontrol.npz",
+      "sha256": "7bbd480799659302aba720a978b64fb63bb14c7da965f58029755843729b70d6",
+      "size": 2465460,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/compare/Quad_arithR0.5a0.1_adavelocontrol_deferR_cpT10.npz",
+      "sha256": "936eaf082e7e6ff2f2e27faa34ce17b02d4484e69932815f718d85c0c6ab7996",
+      "size": 128740,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/compare/Quad_arith_gd.npz",
+      "sha256": "7dfd44fbb990874473a1893d93674e4895833f0cf3dde4d00b0eee09d616fa55",
+      "size": 6110192,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/compare/Quad_arith_nagsc.npz",
+      "sha256": "a2fa5dbe04a9c24f2103f45338698ddc66430c30e483b6eb2ddf0e63423f3310",
+      "size": 4975216,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/compare/Quad_arith_restartAGD.npz",
+      "sha256": "17e367218eed8a315115e1e33284683bca8e841f950d193dbe1c935fd42b5988",
+      "size": 4271152,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/compare/Quad_arith_restartHB.npz",
+      "sha256": "d0f080232158d929503c0db6503a335b63cf65dfe12e78a6e0444616f69de4c1",
+      "size": 3642096,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/compare/base_config.json",
+      "sha256": "88a29b80ff3cfafe06101eea3072490186094a971228b8a3513ecd20e09f5a92",
+      "size": 1564,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "88a29b80ff3cfafe06101eea3072490186094a971228b8a3513ecd20e09f5a92",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/compare/benchmark_stats.csv",
+      "sha256": "14b679ecefc69c157f74fc46ba5f1cbebc7bf902c5f26069486e36d506b7ece0",
+      "size": 1311,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/compare/benchmark_summary.csv",
+      "sha256": "7411b60ff756343eebe5851daa82124891707fda9520b0331be43ed733f747df",
+      "size": 12293,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/compare/fig/quad_arith_vc_compare_val_grad_call.pdf",
+      "sha256": "51311cbe4c3c6f6202e537c69d0669f454a65998202d28cdf3e8f9a93d58a9a5",
+      "size": 61118,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/compare/fig/quad_arith_vc_compare_val_oracle_call.pdf",
+      "sha256": "340213fc00a06df38b21de3af119776c9982ae55f55d7fb511c7ab6e734e613d",
+      "size": 71560,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/compare/fig/quad_arith_vc_compare_val_time.pdf",
+      "sha256": "06dd51d72e0c843cf2906a2ead6834834d9b13129e3592877d7d66f41e0724ee",
+      "size": 76609,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/sweep/Quad_arithR0.25a0.05_adavelocontrol.npz",
+      "sha256": "4684e1d0e167a875e8a50f0b49077894d0e235de20b324d7ba359468d5d16070",
+      "size": 900932,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/sweep/Quad_arithR0.25a0.1_adavelocontrol.npz",
+      "sha256": "45a53393d55cf13bdc9c1ff9415725b95d4ecd8bf3edde14e3a40496d794ca25",
+      "size": 957092,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/sweep/Quad_arithR0.25a0.5_adavelocontrol.npz",
+      "sha256": "19e45e37caa313f787687309d7af48ed3a3618968be7ef557a2dabc67dc6323f",
+      "size": 958100,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/sweep/Quad_arithR0.5a0.05_adavelocontrol.npz",
+      "sha256": "34cb042aca44490672f0e4cb5aa4b055f36c853fcafbcb43057ff3f859b42ae1",
+      "size": 905108,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/sweep/Quad_arithR0.5a0.1_adavelocontrol.npz",
+      "sha256": "c140519589c3dfe11c98a9e37b79e6957d925a1b5a7f777ff0f9fb27ab47e88d",
+      "size": 923108,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/sweep/Quad_arithR0.5a0.5_adavelocontrol.npz",
+      "sha256": "3dd77c6c5c25985c5d193b8c331d970c8498a29bd85e5406c5ce2e432fc784de",
+      "size": 960116,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/sweep/Quad_arithR0.75a0.05_adavelocontrol.npz",
+      "sha256": "194de6794188fafe817bde7627d6960bf1f43d6ecd4ef1b9142a9ddd79861b39",
+      "size": 964868,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/sweep/Quad_arithR0.75a0.1_adavelocontrol.npz",
+      "sha256": "f173cd64aded40896f851af198ca57f36fe77feb4842c2cff88f3af91332542d",
+      "size": 968180,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/sweep/Quad_arithR0.75a0.5_adavelocontrol.npz",
+      "sha256": "5b46381451eadf5f919e6071e5e1c47c6ff8a10bab3995af715c6ece32e7baba",
+      "size": 934340,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/sweep/base_config.json",
+      "sha256": "19d56680b3793408b91ce75dd3011fcf762ddb676fb00e9858b98bb728e78b8e",
+      "size": 2772,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "19d56680b3793408b91ce75dd3011fcf762ddb676fb00e9858b98bb728e78b8e",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/sweep/benchmark_stats.csv",
+      "sha256": "1f4a590617457542a3401d918cfcc4f72c69ecaf57f812e09c8e861bea7bd753",
+      "size": 2004,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/sweep/benchmark_summary.csv",
+      "sha256": "7054e8d04752574912b3395e8d8739498b80ee2e479baab0d356a9f35fe4c279",
+      "size": 4132,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/quad_arith/sweep/fig/quad_arith_vc_sweep_val_oracle_call.pdf",
+      "sha256": "deae80071046f10b7c524c98e4cfa72ee020a194decead8daa8e1e1bc5264474",
+      "size": 98840,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/compare/RosenbrockR0.5a0.1_adavelocontrol.npz",
+      "sha256": "1575efd5b18bbe2be70f4927fff43541c831903dfc3c0249a9fb36afe47757b0",
+      "size": 2235540,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/compare/RosenbrockR0.5a0.1_adavelocontrol_deferR_cpT10.npz",
+      "sha256": "911f663a08a68905818e1eb167db86e7e04f42dd228ab5eabce737647d75ad83",
+      "size": 691620,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/compare/Rosenbrock_gd.npz",
+      "sha256": "550af13def753419e0a3b09c9507bbc0d32f055cd6422cc70793e3f4b6d82843",
+      "size": 5240048,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/compare/Rosenbrock_restartAGD.npz",
+      "sha256": "088ef9eaff737dea0253a80c365b4f4d1f2eb0e676f38f6f7419efe45f3cf71b",
+      "size": 5362288,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/compare/Rosenbrock_restartHB.npz",
+      "sha256": "80be16efb168236b1ee8194c1448a47d3af94848e871ad74e4faa06971441967",
+      "size": 4161328,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/compare/base_config.json",
+      "sha256": "f296bb725a6aa40537ccc0bc14f7dd3ccbc0ff3672b3d5e347a1c5c1bcbaccd8",
+      "size": 1429,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "f296bb725a6aa40537ccc0bc14f7dd3ccbc0ff3672b3d5e347a1c5c1bcbaccd8",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/compare/benchmark_stats.csv",
+      "sha256": "153cd5232eb811bd7f580a880d85b530845d2b7f3aa377a6f8e2e092dcca1fe7",
+      "size": 1161,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/compare/benchmark_summary.csv",
+      "sha256": "4fa18ad7f9f70fe4a45c3afbf774abe05e1211e2ed3e7d918e4371b77b5121a6",
+      "size": 10541,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/compare/fig/rosenbrock_vc_compare_val_grad_call.pdf",
+      "sha256": "7675506099202c3c653f120fc5ac57db37a4c9bac55236c0b0ef9f5a5931e27f",
+      "size": 33433,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/compare/fig/rosenbrock_vc_compare_val_oracle_call.pdf",
+      "sha256": "22183697358b7288f82dce601ad670fd0da399a4291be023775afe459de34d5f",
+      "size": 36273,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/compare/fig/rosenbrock_vc_compare_val_time.pdf",
+      "sha256": "cca0e8d55a4c3856a2098e546f8205009567eb019e732f617df707715b47d138",
+      "size": 43610,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/sweep/RosenbrockR0.25a0.05_adavelocontrol.npz",
+      "sha256": "0144053cd655a0b8e3704d5e0ab4d269e31e273d1efa7ac7539014634947e1ff",
+      "size": 637988,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/sweep/RosenbrockR0.25a0.1_adavelocontrol.npz",
+      "sha256": "2ed026d7ad65c95a5f28a923eef4d2b44bc56190b89cd33a888848b01967d8b9",
+      "size": 760244,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/sweep/RosenbrockR0.25a0.5_adavelocontrol.npz",
+      "sha256": "8a62ee36b8f59ee993dbcfca0b2897577316961d5d80f38d7a78606201d3a54b",
+      "size": 672692,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/sweep/RosenbrockR0.5a0.05_adavelocontrol.npz",
+      "sha256": "d1b9668d4aa77891029243d90994bc2ece71e98a7dd64de602b86461663ca3ea",
+      "size": 704372,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/sweep/RosenbrockR0.5a0.1_adavelocontrol.npz",
+      "sha256": "7c04b4b7210a81211d2eef0a96d4d19d643b493c3a8ed213e5cc143117661904",
+      "size": 732164,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/sweep/RosenbrockR0.5a0.5_adavelocontrol.npz",
+      "sha256": "14530a3109503b5b19f0633b8f0d616d672b25aacc4e614e200c723187778a30",
+      "size": 742964,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/sweep/RosenbrockR0.75a0.05_adavelocontrol.npz",
+      "sha256": "9ead23b9243b5840d2f89b300915b2e97a583c8ffc7a36c9e6899660fbfd07b3",
+      "size": 802868,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/sweep/RosenbrockR0.75a0.1_adavelocontrol.npz",
+      "sha256": "1a7d05af28b308160637abb24cf80b0a3123f63308f353679d6d0fc28ec702e1",
+      "size": 739796,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/sweep/RosenbrockR0.75a0.5_adavelocontrol.npz",
+      "sha256": "f29338afcbc00d39dc836a0527e4372837f744053d22268f65724d9fca498ba7",
+      "size": 722804,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/sweep/base_config.json",
+      "sha256": "88f10488727229e5e6f817aadef7359cb221c5606de36bcc20087257448d0d10",
+      "size": 2772,
+      "included_in_repository": true,
+      "included_in_results_archive": true,
+      "repository_sha256": "88f10488727229e5e6f817aadef7359cb221c5606de36bcc20087257448d0d10",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/sweep/benchmark_stats.csv",
+      "sha256": "bbdc2c325a3212d47b2d8cb1fe2f1dd88908bee425b14b312b039faa38abdc06",
+      "size": 2012,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/sweep/benchmark_summary.csv",
+      "sha256": "f4d16d1f6261961b5a77a5c6fbd09e8b3067c1638455d645aeca8790ef3165fd",
+      "size": 4137,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/result/rosenbrock/sweep/fig/rosenbrock_vc_sweep_val_oracle_call.pdf",
+      "sha256": "3d4894740d053ac8731a70e6d4ccc560904aabf117eb5e45fb69cfe1765ea962",
+      "size": 69813,
+      "included_in_repository": false,
+      "included_in_results_archive": true,
+      "repository_sha256": null,
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/run_trial.py",
+      "sha256": "2b00ba844b6a2d5523fdc39582aec4073175acca5c0ce15ab8083c18f4e06e99",
+      "size": 6619,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "2b00ba844b6a2d5523fdc39582aec4073175acca5c0ce15ab8083c18f4e06e99",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/tests/test_oracle_accounting.py",
+      "sha256": "15f9e429985fcb8f3ddd3cdd2a5cd78856e683e36012e7fa9c50825989d4a109",
+      "size": 7651,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "15f9e429985fcb8f3ddd3cdd2a5cd78856e683e36012e7fa9c50825989d4a109",
+      "repository_content_changed": false
+    },
+    {
+      "path": "vc_adaptive/tests/test_paper_mode.py",
+      "sha256": "276f5b947e5ce6a67177c6800b0c65435f309c3a00a832923679f5bf462a029c",
+      "size": 7404,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "1fb0e83c0f5369719812d8bad58983a21b3b292bfe70a3dc1058cc54425a78ed",
+      "repository_content_changed": true
+    },
+    {
+      "path": "vc_adaptive/tests/test_predictive_evaluation.py",
+      "sha256": "f594cbbcae177bd4fe30734c275eb68be0db9bbf3add1555895299f32d0f83a8",
+      "size": 4760,
+      "included_in_repository": true,
+      "included_in_results_archive": false,
+      "repository_sha256": "f594cbbcae177bd4fe30734c275eb68be0db9bbf3add1555895299f32d0f83a8",
+      "repository_content_changed": false
+    }
+  ],
+  "supplemental_uploads": [
+    "check_weighted_output.py",
+    "plot_fig3.py",
+    "run_fig3.py"
+  ],
+  "supplemental_upload_manifest": "metadata/maml_helpers_manifest.json"
+}

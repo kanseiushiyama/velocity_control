@@ -1,0 +1,107 @@
+{
+  "L": 10000,
+  "algorithms": [
+    "ours"
+  ],
+  "checkpoint_threshold": 10,
+  "dim": null,
+  "experiment_version": "benchmark-v9-oracle-qing-compensated",
+  "hmax": 1.0,
+  "jobs": [
+    {
+      "R": 0.25,
+      "algorithm": "ours",
+      "alpha": 0.05,
+      "checkpoint_threshold": null,
+      "job_id": "ours_R0p25_a0p05_parallel",
+      "label": "AdaVeloControl (R=0.25, alpha=0.05, parallel)",
+      "line_search_mode": "parallel"
+    },
+    {
+      "R": 0.25,
+      "algorithm": "ours",
+      "alpha": 0.1,
+      "checkpoint_threshold": null,
+      "job_id": "ours_R0p25_a0p1_parallel",
+      "label": "AdaVeloControl (R=0.25, alpha=0.1, parallel)",
+      "line_search_mode": "parallel"
+    },
+    {
+      "R": 0.25,
+      "algorithm": "ours",
+      "alpha": 0.5,
+      "checkpoint_threshold": null,
+      "job_id": "ours_R0p25_a0p5_parallel",
+      "label": "AdaVeloControl (R=0.25, alpha=0.5, parallel)",
+      "line_search_mode": "parallel"
+    },
+    {
+      "R": 0.5,
+      "algorithm": "ours",
+      "alpha": 0.05,
+      "checkpoint_threshold": null,
+      "job_id": "ours_R0p5_a0p05_parallel",
+      "label": "AdaVeloControl (R=0.5, alpha=0.05, parallel)",
+      "line_search_mode": "parallel"
+    },
+    {
+      "R": 0.5,
+      "algorithm": "ours",
+      "alpha": 0.1,
+      "checkpoint_threshold": null,
+      "job_id": "ours_R0p5_a0p1_parallel",
+      "label": "AdaVeloControl (R=0.5, alpha=0.1, parallel)",
+      "line_search_mode": "parallel"
+    },
+    {
+      "R": 0.5,
+      "algorithm": "ours",
+      "alpha": 0.5,
+      "checkpoint_threshold": null,
+      "job_id": "ours_R0p5_a0p5_parallel",
+      "label": "AdaVeloControl (R=0.5, alpha=0.5, parallel)",
+      "line_search_mode": "parallel"
+    },
+    {
+      "R": 0.75,
+      "algorithm": "ours",
+      "alpha": 0.05,
+      "checkpoint_threshold": null,
+      "job_id": "ours_R0p75_a0p05_parallel",
+      "label": "AdaVeloControl (R=0.75, alpha=0.05, parallel)",
+      "line_search_mode": "parallel"
+    },
+    {
+      "R": 0.75,
+      "algorithm": "ours",
+      "alpha": 0.1,
+      "checkpoint_threshold": null,
+      "job_id": "ours_R0p75_a0p1_parallel",
+      "label": "AdaVeloControl (R=0.75, alpha=0.1, parallel)",
+      "line_search_mode": "parallel"
+    },
+    {
+      "R": 0.75,
+      "algorithm": "ours",
+      "alpha": 0.5,
+      "checkpoint_threshold": null,
+      "job_id": "ours_R0p75_a0p5_parallel",
+      "label": "AdaVeloControl (R=0.75, alpha=0.5, parallel)",
+      "line_search_mode": "parallel"
+    }
+  ],
+  "line_search_mode": [
+    "parallel"
+  ],
+  "n_iter": 17500,
+  "paper": true,
+  "paper_compare": false,
+  "paper_sweep": true,
+  "problem": "quad_arith",
+  "repeats": 1,
+  "seed": 0,
+  "seed_stride": 0,
+  "sigma_x0": 1.0,
+  "stop_mode": "time",
+  "time_limit": 50.0
+}

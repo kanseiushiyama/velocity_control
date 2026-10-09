@@ -1,0 +1,521 @@
+--- a/VC_MAML/check_weighted_output.py
++++ b/VC_MAML/check_weighted_output.py
+@@ -1,9 +1,11 @@
+ """Check the VC averaging window and its differentiated output independently."""
+ from pathlib import Path
++import argparse
+ import os
+ import sys
+ import json
+ os.environ['JAX_ENABLE_X64'] = 'False'
++os.environ['JAX_PLATFORMS'] = 'cpu'
+ sys.path.insert(0, str(Path(__file__).resolve().parent / 'maml_code'))
+ import jax
+ import jax.numpy as jnp
+@@ -40,27 +42,49 @@
+     return jnp.einsum('i,ij->j',jnp.asarray(weights,dtype=theta.dtype),jnp.stack(states[start:cfg.inner_steps])), states[-1], times
+ 
+ 
+-records=[]
+-for k in [2,4,5,8,20]:
+-    cfg=core.ExperimentConfig(hidden_width=4,inner_steps=k)
+-    theta=core.initialize_parameters(jax.random.PRNGKey(3),4)
+-    task=core.sample_task_batch(jax.random.PRNGKey(7),cfg,1)
+-    sx,sy,qx,qy=(a[0] for a in task)
+-    adapter=core.make_adapter(cfg,'vc')
+-    actual=adapter(theta,sx,sy)
+-    expected,last,times=reference(theta,sx,sy,cfg)
+-    np.testing.assert_allclose(actual,expected,rtol=2e-5,atol=2e-6)
+-    grad_actual=jax.grad(lambda z:core.mse(adapter(z,sx,sy),qx,qy,4))(theta)
+-    grad_expected=jax.grad(lambda z:core.mse(reference(z,sx,sy,cfg)[0],qx,qy,4))(theta)
+-    np.testing.assert_allclose(grad_actual,grad_expected,rtol=2e-4,atol=2e-5)
+-    difference=float(jnp.linalg.norm(actual-last))
+-    assert difference>1e-6
+-    records.append(dict(inner_steps=k,averaged_indices=times.tolist(),distance_from_last_iterate=difference,status='pass'))
+-try:
+-    core.make_adapter(core.ExperimentConfig(inner_steps=1),'vc')
+-except ValueError:
+-    pass
+-else:
+-    raise AssertionError('K=1 must be rejected')
+-Path(__file__).with_name('weighted_output_checks.json').write_text(json.dumps(records,indent=2))
+-print(json.dumps(records,indent=2))
++def run_checks():
++    records=[]
++    for k in [2,4,5,8,20]:
++        cfg=core.ExperimentConfig(hidden_width=4,inner_steps=k)
++        theta=core.initialize_parameters(jax.random.PRNGKey(3),4)
++        task=core.sample_task_batch(jax.random.PRNGKey(7),cfg,1)
++        sx,sy,qx,qy=(a[0] for a in task)
++        adapter=core.make_adapter(cfg,'vc')
++        actual=adapter(theta,sx,sy)
++        expected,last,times=reference(theta,sx,sy,cfg)
++        np.testing.assert_allclose(actual,expected,rtol=2e-5,atol=2e-6)
++        grad_actual=jax.grad(lambda z:core.mse(adapter(z,sx,sy),qx,qy,4))(theta)
++        grad_expected=jax.grad(lambda z:core.mse(reference(z,sx,sy,cfg)[0],qx,qy,4))(theta)
++        np.testing.assert_allclose(grad_actual,grad_expected,rtol=2e-4,atol=2e-5)
++        difference=float(jnp.linalg.norm(actual-last))
++        assert difference>1e-6
++        records.append(dict(inner_steps=k,averaged_indices=times.tolist(),distance_from_last_iterate=difference,status='pass'))
++    try:
++        core.make_adapter(core.ExperimentConfig(inner_steps=1),'vc')
++    except ValueError:
++        pass
++    else:
++        raise AssertionError('K=1 must be rejected')
++    return records
++
++
++def main() -> None:
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--output', type=Path,
++                        default=Path(__file__).resolve().parents[1] / 'runs' / 'weighted-output-check' / 'weighted_output_checks.json',
++                        help='New JSON output file; an existing file is never overwritten.')
++    args = parser.parse_args()
++    output = args.output.expanduser().resolve()
++    if output.exists():
++        parser.error(f'Refusing to overwrite {output}; choose a new --output.')
++    records = run_checks()
++    output.parent.mkdir(parents=True, exist_ok=True)
++    # Exclusive creation also protects a file created while the checks run.
++    with output.open('x', encoding='utf-8') as handle:
++        handle.write(json.dumps(records, indent=2) + '\n')
++    print(json.dumps(records, indent=2))
++    print(f'Checks passed. Report: {output}')
++
++
++if __name__ == '__main__':
++    main()
+--- a/VC_MAML/plot_fig3.py
++++ b/VC_MAML/plot_fig3.py
+@@ -1,4 +1,5 @@
+ """Recreate the four-panel Fig. 3 from exported aggregate curves."""
++import argparse
+ import json
+ import os
+ from pathlib import Path
+@@ -10,7 +11,20 @@
+ ROOT = Path(__file__).resolve().parent
+ 
+ 
+-def plot():
++def plot(result_dir: Path | None = None, output_dir: Path | None = None) -> None:
++    result_dir = (result_dir or ROOT / 'result').expanduser().resolve()
++    target = (output_dir or ROOT.parent / 'runs' / 'maml-fig3-replot').expanduser().resolve()
++    for protected in (ROOT / 'result', ROOT / 'figures', ROOT / 'maml_code'):
++        if target.is_relative_to(protected.resolve()):
++            raise ValueError(f'Output must not be inside bundled data or code: {target}')
++    for name in ('fig3_maml.pdf', 'fig3_maml.png'):
++        if (target / name).exists():
++            raise FileExistsError(f'Refusing to overwrite {target / name}; choose another --output-dir.')
++    for steps in (5, 20):
++        for name in ('base_config.json', 'candidate_grid.json', 'best_hyperparameters.json', 'fig3_curves.npz'):
++            path = result_dir / f'inner_{steps}' / name
++            if not path.is_file():
++                raise FileNotFoundError(f'Missing figure input: {path}')
+     fig, axes = plt.subplots(2, 2, figsize=(12, 8.5))
+     cmap = plt.get_cmap('tab10')
+     colors = {30: cmap(0), 100: cmap(1), 300: cmap(2)}
+@@ -18,7 +32,7 @@
+     widths = dict(gd=2.8, nag=1.4, vc=1.4)
+     styles = {30: '--', 100: '-.', 300: ':'}
+     for row, steps in enumerate([5, 20]):
+-        root = ROOT / 'result' / f'inner_{steps}'
++        root = result_dir / f'inner_{steps}'
+         candidates = json.loads((root / 'candidate_grid.json').read_text())
+         best = json.loads((root / 'best_hyperparameters.json').read_text())
+         with np.load(root / 'fig3_curves.npz', allow_pickle=False) as curves:
+@@ -43,7 +57,7 @@
+                         color=method_colors[method], alpha=.15, linewidth=0)
+         for col in range(2):
+             ax = axes[row, col]
+-            budget = 40 if steps == 5 else 80
++            budget = float(json.loads((root / 'base_config.json').read_text())['time_budget_seconds'])
+             ax.set_xlim(-0.05*budget, 1.05*budget)
+             ax.set_xlabel('execution time [s]')
+             ax.set_ylabel('meta loss')
+@@ -58,12 +72,25 @@
+                         hspace=.42, wspace=.24)
+     fig.text(.535, .957, '5 iterations', ha='center', fontsize=17)
+     fig.text(.535, .455, '20 iterations', ha='center', fontsize=17)
+-    target = ROOT / 'figures'
+-    target.mkdir(exist_ok=True)
++    target.mkdir(parents=True, exist_ok=True)
+     fig.savefig(target / 'fig3_maml.pdf', bbox_inches='tight')
+     fig.savefig(target / 'fig3_maml.png', dpi=180, bbox_inches='tight')
+     plt.close(fig)
+ 
+ 
++def main() -> None:
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--result-dir', type=Path, default=ROOT / 'result',
++                        help='Directory containing inner_5/ and inner_20/ curve arrays.')
++    parser.add_argument('--output-dir', type=Path, default=ROOT.parent / 'runs' / 'maml-fig3-replot',
++                        help='New figure destination (the original figures are never overwritten).')
++    args = parser.parse_args()
++    try:
++        plot(args.result_dir, args.output_dir)
++    except (OSError, ValueError, KeyError) as exc:
++        parser.error(str(exc))
++    print(f'Wrote fig3_maml.pdf and fig3_maml.png to {args.output_dir.resolve()}')
++
++
+ if __name__ == '__main__':
+-    plot()
++    main()
+--- a/VC_MAML/run_fig3.py
++++ b/VC_MAML/run_fig3.py
+@@ -1,11 +1,19 @@
+-"""Run fresh MAML experiments matching the supplied Fig. 3."""
++"""Run, validate and plot the supplied MAML Figure 3 experiment.
++
++The default is the paper setting: 300 trials, with 40/80 seconds of optimizer
++work for K=5/20 (five hours in total, excluding compilation and evaluation).
++Use --dry-run to inspect the commands, or --smoke for a small integration test.
++All generated files go into a NEW workspace; bundled results are not reused.
++"""
++from __future__ import annotations
++
++import argparse
+ import csv
+ import hashlib
+-import io
+ import json
+ import os
+ from pathlib import Path
+-import platform
++import shlex
+ import subprocess
+ import sys
+ import time
+@@ -13,39 +21,58 @@
+ 
+ ROOT = Path(__file__).resolve().parent
+ CODE = ROOT / 'maml_code'
+-os.environ['MPLBACKEND'] = 'Agg'
+-os.environ['MPLCONFIGDIR'] = str(ROOT / 'matplotlib_cache')
+-os.environ['PYTHONUNBUFFERED'] = '1'
+-os.environ['JAX_ENABLE_X64'] = 'False'
+-sys.path.insert(0, str(CODE))
+-import numpy as np
+-import jax
+-import benchmark_maml as bench
+-
+-started = time.time()
+-commands = []
+-validations = []
+-
+-
+-def status(**kwargs):
+-    p = ROOT / 'execution_status.tmp'
+-    p.write_text(json.dumps(dict(started=started, updated=time.time(), **kwargs), indent=2))
+-    p.replace(ROOT / 'execution_status.json')
+-
+-
+-def validate_and_export(steps):
+-    out = ROOT / 'result' / f'inner_{steps}'
++REPOSITORY = ROOT.parent
++
++
++def build_jobs(workspace: Path, *, smoke: bool = False) -> list[dict]:
++    """Keep the original full-run arguments; smoke is a separate test preset."""
++    jobs = []
++    for steps in (5, 20):
++        budget = 0.05 if smoke else (40 if steps == 5 else 80)
++        repeats = 1 if smoke else 10
++        grid = ['100'] if smoke else ['30', '100', '300']
++        out = workspace / 'result' / f'inner_{steps}'
++        argv = ['--repeats', str(repeats), '--seed', '0', '--seed-stride', '1',
++                '--inner-steps', str(steps), '--time-budget-seconds', str(budget),
++                '--hidden-width', '4' if smoke else '40',
++                '--eval-tasks', '4' if smoke else '256',
++                '--support-size', '10', '--query-size', '10',
++                '--meta-batch-size', '2' if smoke else '16', '--log-every', '5',
++                '--inner-vc-alpha', '0.1', '--inner-vc-r', '0.5', '--outer-adam-lr', '0.001',
++                '--gd-L-grid', *grid, '--nag-L-grid', *grid,
++                '--vc-L-grid', *grid, '--vc-M-grid', *grid,
++                '--output-dir', str(out)]
++        jobs.append(dict(inner_steps=steps, budget=budget, repeats=repeats,
++                         candidates=3 if smoke else 15,
++                         command=[sys.executable, '-u', str(CODE / 'benchmark_maml.py'), *argv]))
++    return jobs
++
++
++def write_status(workspace: Path, started: float, **kwargs) -> None:
++    path = workspace / 'execution_status.tmp'
++    path.write_text(json.dumps(dict(started=started, updated=time.time(), **kwargs), indent=2) + '\n')
++    path.replace(workspace / 'execution_status.json')
++
++
++def validate_and_export(steps: int, workspace: Path, *, smoke: bool = False) -> dict:
++    """Apply the supplied configuration/history checks and curve aggregation."""
++    import numpy as np
++    import benchmark_maml as bench
++
++    repeats = 1 if smoke else 10
++    candidate_count = 3 if smoke else 15
++    out = workspace / 'result' / f'inner_{steps}'
+     candidates = json.loads((out / 'candidate_grid.json').read_text())
+-    assert len(candidates) == 15
++    assert len(candidates) == candidate_count
+     configs = json.loads((out / 'base_config.json').read_text())
+-    budget = 40 if steps == 5 else 80
++    budget = 0.05 if smoke else (40 if steps == 5 else 80)
+     assert configs['time_budget_seconds'] == budget
+-    summaries, histories = bench.load_candidate_results(out, candidates, 10)
++    summaries, histories = bench.load_candidate_results(out, candidates, repeats)
+     curves = {}
+     summary_rows = []
+     for c in candidates:
+         cid = c['candidate_id']
+-        assert len(summaries[cid]) == len(histories[cid]) == 10, cid
++        assert len(summaries[cid]) == len(histories[cid]) == repeats, cid
+         for repeat, (s, h) in enumerate(zip(summaries[cid], histories[cid])):
+             trial = out / 'trials' / f'repeat_{repeat:03d}' / cid
+             cfg = json.loads((trial / 'config.json').read_text())
+@@ -61,7 +88,7 @@
+             a = np.asarray([[float(r[k]) for k in ('elapsed_seconds','eval_query_loss','outer_iteration','oracle_calls')] for r in h])
+             assert np.isfinite(a).all() and (a[:,1] > 0).all(), trial
+             assert np.all(np.diff(a[:,0]) >= 0) and a[0,0] == 0, trial
+-            assert np.all(a[:,3] == a[:,2]*16*steps), trial
++            assert np.all(a[:,3] == a[:,2]*configs['meta_batch_size']*steps), trial
+             summary_rows.append(s)
+         grid, median, q25, q75 = bench.aggregate_curve(histories[cid], 'elapsed_seconds', max_x=budget)
+         for suffix, data in [('time',grid),('median',median),('q25',q25),('q75',q75)]:
+@@ -74,84 +101,160 @@
+     with (out / 'all_trial_summaries.csv').open('w') as f:
+         w = csv.DictWriter(f, fieldnames=fields); w.writeheader(); w.writerows(summary_rows)
+     rows = bench.read_csv(out / 'hyperparameter_grid_results.csv')
+-    assert len(rows) == 15 and all(int(r['n']) == 10 for r in rows)
++    assert len(rows) == candidate_count and all(int(r['n']) == repeats for r in rows)
+     best = json.loads((out / 'best_hyperparameters.json').read_text())
+     for method in ['gd','nag','vc']:
+         expected_best = min((c for c in candidates if c['method']==method),
+             key=lambda c: np.median([s['final_eval_query_loss'] for s in summaries[c['candidate_id']]]))
+         assert best[method]['candidate_id'] == expected_best['candidate_id']
+-    validations.append(dict(inner_steps=steps, trials=150, candidates=15, repeats=10, time_budget_seconds=budget, best=best))
+-    (ROOT / 'validation.json').write_text(json.dumps(validations, indent=2))
+-
+-
+-try:
+-    hashes = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in CODE.glob('*.py')}
+-    env = dict(python=sys.version, platform=platform.platform(), jax=jax.__version__,
+-               devices=[str(d) for d in jax.devices()], jax_enable_x64=jax.config.x64_enabled,
+-               source_hashes=hashes, seed_stride=1,
+-               thread_environment={k:os.environ.get(k) for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','XLA_FLAGS']})
+-    (ROOT / 'environment.json').write_text(json.dumps(env, indent=2))
+-    with (ROOT / 'requirements-lock.txt').open('w') as f:
+-        subprocess.run([sys.executable,'-m','pip','freeze'],stdout=f,check=True)
+-    for steps in [5,20]:
+-        budget = 40 if steps == 5 else 80
+-        out = ROOT / 'result' / f'inner_{steps}'
+-        argv = ['--repeats','10','--seed','0','--seed-stride','1',
+-                '--inner-steps',str(steps),'--time-budget-seconds',str(budget),
+-                '--hidden-width','40','--eval-tasks','256','--support-size','10','--query-size','10',
+-                '--meta-batch-size','16','--log-every','5',
+-                '--inner-vc-alpha','0.1','--inner-vc-r','0.5','--outer-adam-lr','0.001',
+-                '--gd-L-grid','30','100','300','--nag-L-grid','30','100','300',
+-                '--vc-L-grid','30','100','300','--vc-M-grid','30','100','300',
+-                '--output-dir',str(out)]
+-        command = [sys.executable,'-u',str(CODE/'benchmark_maml.py'),*argv]
+-        commands.append(command);(ROOT/'commands.json').write_text(json.dumps(commands,indent=2))
+-        log = ROOT/f'inner_{steps}.log'
+-        status(state='running',inner_steps=steps,log=str(log))
+-        print(f'START inner_steps={steps}: 15 candidates x 10 repeats x {budget}s',flush=True)
+-        with log.open('a') as f:
+-            subprocess.run(command,cwd=CODE,stdout=f,stderr=subprocess.STDOUT,check=True)
+-        validate_and_export(steps)
+-        print(f'DONE inner_steps={steps}: 150 trials validated',flush=True)
+-    subprocess.run([sys.executable,str(ROOT/'plot_fig3.py')],check=True)
+-    status(state='complete',trials=300,elapsed_s=time.time()-started)
+-    (ROOT/'RESULTS_README.md').write_text('''# MAML Fig. 3 再実験
+-
+-添付maml_code.zipの3個のPythonファイルを変更せず使用し、このMacで新規に300試行を実行。
+-旧版の最終反復出力による結果は再利用していない。
+-VCは加重平均出力、GD/NAGは最終反復出力を使用。
+-コードと環境ファイルはGitHub掲載用に梱包しているが、公開・アップロードは行っていない。
+-
+-- 内側更新回数: 5 / 20（図の各行のiterations）
+-- GD/NAG: L in {30,100,300}
+-- VC: L,M in {30,100,300}、alpha=0.1、r=0.5
+-- 5回更新は40秒、20回更新は80秒 x 各10反復。seed=0〜9、各反復内の候補は同じseed。
+-- 40/80秒はoptimizerの計測時間。JIT・held-out評価は除外（提供コードの仕様）。
+-- ネットワーク幅40、meta batch 16、評価タスク256、support/query各10。
+-- JAX CPU、提供コードの既定どおりfloat32（前回VC実験のfloat64とは異なる）。
+-
+-figures/fig3_maml.pdf が2行2列のFig. 3。PNGも同梱。
+-左: 各手法の最良候補の中央値と25–75百分位帯。右: 全15候補の中央値。
+-最良候補は今回の10反復の最終meta-query loss中央値が最小の設定。
+-スクリーンショットのbestを固定したり、曲線を一致させたりしていない。
+-各曲線は提供コードのaggregate_curveと同じ121点の時間グリッドへの線形補間で集計。
+-
+-凡例などの調整はplot_fig3.pyを編集して実行すれば再計算不要。
+-result/inner_5, inner_20のfig3_curves.npzには候補別time/median/q25/q75と
+-10反復の補間済み系列interpolated_runsを保存。
+-同フォルダに設定・候補一覧・最良候補・集計CSV・標準出力PDFがある。
+-この送付用ZIPには重いtrialsフォルダを含めない。生の履歴は元PCに保存。
+-run_fig3.pyは全実験を実行・検証するスクリプト。
+-environment.json、requirements-lock.txt、commands.jsonで環境と実行条件を記録。
+-''')
+-    paths = [p for folder in ['maml_code','result','figures'] for p in (ROOT/folder).rglob('*')
+-             if p.is_file() and 'trials' not in p.relative_to(ROOT).parts and '__pycache__' not in p.parts]
+-    paths += [p for p in ROOT.iterdir() if p.is_file() and (p.suffix in ['.py','.json','.txt','.md'] or p.name in ['.python-version','.gitignore'])]
+-    archive = ROOT/'maml_weighted_fig3_github_bundle.zip'
+-    with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
+-        for p in paths: z.write(p,'maml_fig3/'+str(p.relative_to(ROOT)))
+-    with zipfile.ZipFile(archive) as z: assert z.testzip() is None
+-    print('FIG3 AND ARCHIVE COMPLETE',flush=True)
+-except BaseException as exc:
+-    status(state='failed',error=repr(exc))
+-    raise
++    return dict(inner_steps=steps, trials=candidate_count*repeats, candidates=candidate_count, repeats=repeats, time_budget_seconds=budget, best=best)
++
++
++def write_results_readme(workspace: Path, jobs: list[dict], smoke: bool) -> None:
++    count = sum(job['candidates'] * job['repeats'] for job in jobs)
++    lines = [
++        '# MAML Figure 3 run', '',
++        '**Small smoke test; not a paper experiment.**' if smoke else 'Fresh execution of the supplied paper settings.', '',
++        f'{count} trials completed. VC uses the dyadic weighted average; GD/NAG use their last inner iterate.',
++        'The three benchmark source files were not changed by this orchestration script.', '',
++        '## Settings', '',
++    ]
++    for job in jobs:
++        lines.append(f"- K={job['inner_steps']}: {job['candidates']} candidates x {job['repeats']} repeats x {job['budget']} seconds of optimizer time.")
++    lines += [
++        '', 'The precise arguments are recorded in commands.json.',
++        'actual_environment.json and requirements-lock.txt describe THIS run, not a recovered historical environment.',
++        'The backend is CPU and MAML uses float32. JIT warmup and held-out evaluation are excluded from optimizer time.',
++        '', '## Outputs', '',
++        'figures/fig3_maml.pdf and figures/fig3_maml.png contain the supplied two-by-two layout.',
++        'Left panels: median and 25th--75th percentiles for the selected candidate.',
++        'Right panels: medians for all tested candidates.',
++        'Selection minimizes median final held-out query loss on the same runs; no independent post-selection test set is used.',
++        'Curves use the benchmark aggregate_curve function and its 121-point linear interpolation grid.',
++        'result/inner_5 and result/inner_20 include curve arrays, all-trial summaries and full trial histories.',
++        'validation.json records the checks of configurations, output conventions, histories and selection.',
++        '', '## Optional archive', '',
++        'With --archive, maml_weighted_fig3_github_bundle.zip contains code, aggregates, figures and run metadata.',
++        'The optional archive excludes trials/ and caches; full histories remain in this workspace.',
++        'Nothing is uploaded to GitHub by this script.', '',
++    ]
++    (workspace / 'RESULTS_README.md').write_text('\n'.join(lines), encoding='utf-8')
++
++
++def create_archive(workspace: Path) -> Path:
++    """Create the optional standalone MAML bundle without the heavy trials."""
++    members = []
++    for path in CODE.iterdir():
++        if path.is_file() and path.suffix in ('.py', '.txt'):
++            members.append((path, Path('maml_code') / path.name))
++    for name in ('run_fig3.py', 'plot_fig3.py', 'check_weighted_output.py'):
++        members.append((ROOT / name, Path(name)))
++    # Include the shared recorder needed by this updated runner in standalone form.
++    recorder = REPOSITORY / 'scripts' / 'record_environment.py'
++    if not recorder.is_file():
++        recorder = ROOT / 'record_environment.py'
++    members.append((recorder, Path('record_environment.py')))
++    license_path = REPOSITORY / 'LICENSE'
++    if not license_path.is_file():
++        license_path = ROOT / 'LICENSE'
++    if license_path.is_file():
++        members.append((license_path, Path('LICENSE')))
++    for path in sorted(workspace.rglob('*')):
++        rel = path.relative_to(workspace)
++        if not path.is_file() or any(part in ('trials', '__pycache__', 'matplotlib_cache') for part in rel.parts):
++            continue
++        if path.suffix == '.zip':
++            continue
++        members.append((path, rel))
++    archive = workspace / 'maml_weighted_fig3_github_bundle.zip'
++    with zipfile.ZipFile(archive, 'x', zipfile.ZIP_DEFLATED) as z:
++        z.writestr('maml_fig3/README.md', (
++            '# MAML experiment bundle\n\n'
++            'Run commands from this extracted directory. Install dependencies from '
++            '`maml_code/requirements.txt`. The library pins are the supplied reference '
++            'environment, whereas `actual_environment.json` records this run.\n\n'
++            'Replot aggregates (no training):\n'
++            '```bash\npython plot_fig3.py --output-dir runs/replot\n```\n\n'
++            'Check weighted output and its meta-gradient:\n'
++            '```bash\npython check_weighted_output.py --output runs/check.json\n```\n\n'
++            'Preview or rerun the experiment into a new workspace:\n'
++            '```bash\npython run_fig3.py --dry-run --output-dir runs/new\n'
++            'python run_fig3.py --smoke --output-dir runs/smoke\n'
++            'python run_fig3.py --output-dir runs/new\n```\n\n'
++            'The final command uses five hours of cumulative optimizer time plus overhead. '
++            'See RESULTS_README.md for the settings and results in this bundle. '
++            'Individual trial histories are excluded from the ZIP but retained in '
++            'the workspace that created it.\n'
++        ))
++        for path, rel in members:
++            z.write(path, 'maml_fig3/' + rel.as_posix())
++    with zipfile.ZipFile(archive) as z:
++        if z.testzip() is not None:
++            raise RuntimeError('Archive CRC check failed')
++    return archive
++
++
++def main() -> None:
++    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
++    parser.add_argument('--output-dir', type=Path, help='New workspace (default: runs/maml-fig3 or runs/maml-fig3-smoke).')
++    parser.add_argument('--dry-run', action='store_true', help='Show the full command plan without creating files or executing trials.')
++    parser.add_argument('--smoke', action='store_true', help='Run a tiny six-trial integration test, not a paper experiment.')
++    parser.add_argument('--archive', action='store_true', help='Also build a standalone ZIP of this run, excluding raw trials.')
++    args = parser.parse_args()
++    workspace = (args.output_dir or REPOSITORY / 'runs' / ('maml-fig3-smoke' if args.smoke else 'maml-fig3')).expanduser().resolve()
++    jobs = build_jobs(workspace, smoke=args.smoke)
++    for job in jobs:
++        print(f"[K={job['inner_steps']}] {shlex.join(job['command'])}", flush=True)
++    optimizer_seconds = sum(job['candidates'] * job['repeats'] * job['budget'] for job in jobs)
++    print(f'Nominal cumulative optimizer time: {optimizer_seconds:g} s (compilation/evaluation excluded).', flush=True)
++    print(f'Output workspace: {workspace}', flush=True)
++    if args.dry_run:
++        return
++    if not __debug__:
++        parser.error('Validation uses assertions; run Python without -O or -OO.')
++    if workspace.exists() and (not workspace.is_dir() or any(workspace.iterdir())):
++        parser.error(f'Refusing to overwrite a nonempty output directory: {workspace}. Choose a new --output-dir.')
++    if not (CODE / 'benchmark_maml.py').is_file():
++        parser.error(f'Missing benchmark code under {CODE}')
++    workspace.mkdir(parents=True, exist_ok=True)
++    os.environ.update(MPLBACKEND='Agg', MPLCONFIGDIR=str(workspace / 'matplotlib_cache'),
++                      PYTHONUNBUFFERED='1', JAX_ENABLE_X64='False', JAX_PLATFORMS='cpu')
++    sys.path.insert(0, str(CODE))
++    started = time.time()
++    validations = []
++    try:
++        write_status(workspace, started, state='starting', mode='smoke' if args.smoke else 'paper')
++        (workspace / 'commands.json').write_text(json.dumps([job['command'] for job in jobs], indent=2) + '\n')
++        (workspace / 'source_hashes.json').write_text(json.dumps(
++            {path.name: hashlib.sha256(path.read_bytes()).hexdigest() for path in sorted(CODE.glob('*.py'))}, indent=2) + '\n')
++        recorder = REPOSITORY / 'scripts' / 'record_environment.py'
++        if not recorder.is_file():
++            recorder = ROOT / 'record_environment.py'  # Optional standalone archive.
++        subprocess.run([sys.executable, str(recorder), '--output', str(workspace / 'actual_environment.json')], check=True)
++        with (workspace / 'requirements-lock.txt').open('w') as handle:
++            subprocess.run([sys.executable, '-m', 'pip', 'freeze'], stdout=handle, check=True)
++        for job in jobs:
++            steps = job['inner_steps']
++            log = workspace / f'inner_{steps}.log'
++            write_status(workspace, started, state='running', inner_steps=steps, log=log.name)
++            print(f"START K={steps}: {job['candidates']} candidates x {job['repeats']} repeats x {job['budget']} s", flush=True)
++            with log.open('w') as handle:
++                subprocess.run(job['command'], cwd=CODE, stdout=handle, stderr=subprocess.STDOUT, check=True)
++            validations.append(validate_and_export(steps, workspace, smoke=args.smoke))
++            (workspace / 'validation.json').write_text(json.dumps(validations, indent=2) + '\n')
++            print(f'DONE K={steps}: trial histories validated and aggregate curves exported.', flush=True)
++        subprocess.run([sys.executable, str(ROOT / 'plot_fig3.py'), '--result-dir', str(workspace / 'result'),
++                        '--output-dir', str(workspace / 'figures')], check=True)
++        write_results_readme(workspace, jobs, args.smoke)
++        write_status(workspace, started, state='complete', trials=sum(v['trials'] for v in validations),
++                     elapsed_s=time.time() - started, mode='smoke' if args.smoke else 'paper')
++        if args.archive:
++            print(f'Created {create_archive(workspace)}', flush=True)
++        print(f'Complete. Results, checks and Figure 3: {workspace}', flush=True)
++    except BaseException as exc:
++        write_status(workspace, started, state='failed', error=repr(exc))
++        raise
++
++
++if __name__ == '__main__':
++    main()

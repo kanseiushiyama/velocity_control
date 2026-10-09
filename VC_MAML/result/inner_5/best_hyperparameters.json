@@ -1,0 +1,41 @@
+{
+  "gd": {
+    "method_id": "gd",
+    "inner_output": "last_iterate",
+    "candidate_id": "gd_L_100",
+    "L": 100.0,
+    "M": "",
+    "n": 10,
+    "final_loss_median": 0.2818785607814789,
+    "final_loss_q25": 0.2771401107311249,
+    "final_loss_q75": 0.29497577250003815,
+    "outer_iterations_median": 87121.5,
+    "oracle_calls_median": 6969720.0
+  },
+  "nag": {
+    "method_id": "nag",
+    "inner_output": "last_iterate",
+    "candidate_id": "nag_L_100",
+    "L": 100.0,
+    "M": "",
+    "n": 10,
+    "final_loss_median": 0.27714987099170685,
+    "final_loss_q25": 0.2506092041730881,
+    "final_loss_q75": 0.28503458201885223,
+    "outer_iterations_median": 73943.5,
+    "oracle_calls_median": 5915480.0
+  },
+  "vc": {
+    "method_id": "vc",
+    "inner_output": "weighted_average_wt",
+    "candidate_id": "vc_L_100_M_30",
+    "L": 100.0,
+    "M": 30.0,
+    "n": 10,
+    "final_loss_median": 0.24140667170286179,
+    "final_loss_q25": 0.2352723516523838,
+    "final_loss_q75": 0.25067416578531265,
+    "outer_iterations_median": 54021.5,
+    "oracle_calls_median": 4321720.0
+  }
+}

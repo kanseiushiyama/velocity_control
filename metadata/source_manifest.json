@@ -1,0 +1,83 @@
+{
+  "source_archive": "VC_paper(1).zip",
+  "entries": [
+    {
+      "path": "VC_MAML/maml_code/benchmark_maml.py",
+      "original_sha256": "184923d12683c4e524f579a9e7df49851744f96ae5aaa3a8d21ff7db4510a807",
+      "sha256": "184923d12683c4e524f579a9e7df49851744f96ae5aaa3a8d21ff7db4510a807",
+      "role": "numerical_or_experiment_source"
+    },
+    {
+      "path": "VC_MAML/maml_code/maml_benchmark_core.py",
+      "original_sha256": "3c52d0686599e20b9fcd0fbe2c7c0f6ca52e3426ec7f5d1ad26999931fd1cfb2",
+      "sha256": "3c52d0686599e20b9fcd0fbe2c7c0f6ca52e3426ec7f5d1ad26999931fd1cfb2",
+      "role": "numerical_or_experiment_source"
+    },
+    {
+      "path": "VC_MAML/maml_code/run_maml_trial.py",
+      "original_sha256": "6b55d2d0af088f26d4423943f793d3e8eaea20665e5e0d1da817bb824bf41a50",
+      "sha256": "6b55d2d0af088f26d4423943f793d3e8eaea20665e5e0d1da817bb824bf41a50",
+      "role": "numerical_or_experiment_source"
+    },
+    {
+      "path": "VC_differentiable/diffable.py",
+      "original_sha256": "a647f3ecc14f32c7e7bdafb7aa55d9fed2f956d0743534cf04af52e64bb7c3a2",
+      "sha256": "a647f3ecc14f32c7e7bdafb7aa55d9fed2f956d0743534cf04af52e64bb7c3a2",
+      "role": "numerical_or_experiment_source"
+    },
+    {
+      "path": "vc_adaptive/experiment_config.py",
+      "original_sha256": "75450f7a8135485db7a12034c1cd3e9a43add3814703f167f872543d271ef113",
+      "sha256": "75450f7a8135485db7a12034c1cd3e9a43add3814703f167f872543d271ef113",
+      "role": "numerical_or_experiment_source"
+    },
+    {
+      "path": "vc_adaptive/main.py",
+      "original_sha256": "a86fc5270d6830a475ea022e10331e27d932a59d61759810c8a3ec67b0f4dc2e",
+      "sha256": "a86fc5270d6830a475ea022e10331e27d932a59d61759810c8a3ec67b0f4dc2e",
+      "role": "numerical_or_experiment_source"
+    },
+    {
+      "path": "vc_adaptive/obj_func.py",
+      "original_sha256": "06f7eb7e36f75d3c2e38e2537546db65d4ff1d55dfdbff3805d90c932ef7fbb0",
+      "sha256": "06f7eb7e36f75d3c2e38e2537546db65d4ff1d55dfdbff3805d90c932ef7fbb0",
+      "role": "numerical_or_experiment_source"
+    },
+    {
+      "path": "vc_adaptive/optimizer.py",
+      "original_sha256": "81f3e4ba1998137ff8f00f21d642ef7d717c7c8cd55d4d52ba4a151e8ba96e8d",
+      "sha256": "81f3e4ba1998137ff8f00f21d642ef7d717c7c8cd55d4d52ba4a151e8ba96e8d",
+      "role": "numerical_or_experiment_source"
+    },
+    {
+      "path": "vc_adaptive/plot.py",
+      "original_sha256": "626311d0598050df0da1e982d709eb6868f22ec2e630531c504401c70a601bc0",
+      "sha256": "626311d0598050df0da1e982d709eb6868f22ec2e630531c504401c70a601bc0",
+      "role": "numerical_or_experiment_source"
+    },
+    {
+      "path": "vc_adaptive/run_trial.py",
+      "original_sha256": "2b00ba844b6a2d5523fdc39582aec4073175acca5c0ce15ab8083c18f4e06e99",
+      "sha256": "2b00ba844b6a2d5523fdc39582aec4073175acca5c0ce15ab8083c18f4e06e99",
+      "role": "numerical_or_experiment_source"
+    },
+    {
+      "path": "vc_adaptive/tests/test_oracle_accounting.py",
+      "original_sha256": "15f9e429985fcb8f3ddd3cdd2a5cd78856e683e36012e7fa9c50825989d4a109",
+      "sha256": "15f9e429985fcb8f3ddd3cdd2a5cd78856e683e36012e7fa9c50825989d4a109",
+      "role": "test"
+    },
+    {
+      "path": "vc_adaptive/tests/test_paper_mode.py",
+      "original_sha256": "276f5b947e5ce6a67177c6800b0c65435f309c3a00a832923679f5bf462a029c",
+      "sha256": "1fb0e83c0f5369719812d8bad58983a21b3b292bfe70a3dc1058cc54425a78ed",
+      "role": "test"
+    },
+    {
+      "path": "vc_adaptive/tests/test_predictive_evaluation.py",
+      "original_sha256": "f594cbbcae177bd4fe30734c275eb68be0db9bbf3add1555895299f32d0f83a8",
+      "sha256": "f594cbbcae177bd4fe30734c275eb68be0db9bbf3add1555895299f32d0f83a8",
+      "role": "test"
+    }
+  ]
+}

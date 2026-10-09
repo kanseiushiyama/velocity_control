@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying paper when using this code in academic work."
+type: software
+title: "Experimental code for A Restart-Free Accelerated Algorithm for Non-Convex Minimization: Continuous and Discrete Analysis"
+authors:
+  - family-names: Ushiyama
+    given-names: Kansei
+  - family-names: Sato
+    given-names: Shun
+license: MIT
+keywords:
+  - nonconvex optimization
+  - velocity control
+  - differentiable optimization
+  - meta-learning
+preferred-citation:
+  type: unpublished
+  title: "A Restart-Free Accelerated Algorithm for Non-Convex Minimization: Continuous and Discrete Analysis"
+  authors:
+    - family-names: Ushiyama
+      given-names: Kansei
+    - family-names: Sato
+      given-names: Shun

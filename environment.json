@@ -1,0 +1,37 @@
+{
+  "description": "Reference experiment environment transcribed from the supplied MAML README.",
+  "source": "VC_MAML/maml_code/README.txt in the original VC_paper(1).zip",
+  "python": "3.14.7",
+  "packages": {
+    "jax": "0.11.1",
+    "jaxlib": "0.11.1",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.1"
+  },
+  "hardware": {
+    "processor": "Apple M3",
+    "cpu_cores": 8,
+    "unified_memory_gib": 24,
+    "architecture": "arm64"
+  },
+  "operating_system": {
+    "name": "macOS",
+    "version": "26.6.2"
+  },
+  "jax_backend": "cpu",
+  "precision_by_suite": {
+    "maml": "float32",
+    "differentiable": "float64",
+    "adaptive": "float64"
+  },
+  "additional_dependencies": {
+    "scikit-learn": null
+  },
+  "provenance_notes": [
+    "All 300 supplied MAML trial-summary rows record Python 3.14.7 and the CPU backend.",
+    "Hardware and package versions above are taken from the MAML README; the environment.json and requirements-lock.txt mentioned in that original README were not included in the input archive.",
+    "The same environment is used as the reference setup throughout the repository documentation; historical execution environments of the other suites are not independently established by this file.",
+    "The scikit-learn version is not recorded in the supplied MAML environment information. It is needed by the unchanged adaptive module imports and is not assigned a fabricated version.",
+    "Floating-point precision follows each supplied implementation and has not been homogenized."
+  ]
+}

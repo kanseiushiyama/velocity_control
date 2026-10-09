@@ -1,0 +1,5 @@
+# Shared package versions from the supplied MAML experiment.
+-r VC_MAML/maml_code/requirements.txt
+
+# Required by vc_adaptive/obj_func.py; version was not recorded in MAML.
+scikit-learn
